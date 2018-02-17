@@ -11,11 +11,13 @@ public class GameLogic {
 
     public boolean applyGuess(char letter) {
         boolean isHit = answer.indexOf(letter) != -1;
-        if (isHit) {
-            hits += letter;
-        } else {
-            misses += letter;
-        }
+        if (hits.indexOf(letter) != -1 && misses.indexOf(letter) != -1) {
+            if (isHit) {
+                hits += letter;
+            } else {
+                misses += letter;
+            }
+        }else {System.out.printf("%s has already been guessed",letter);}
         return isHit;
     }
 
