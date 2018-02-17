@@ -2,6 +2,7 @@ package com.elswefi;
 
 public class GameLogic {
     private String answer;
+    private final static int MAX_TRIES=7;
     private String hits = "";
     private String misses = "";
 
@@ -10,7 +11,7 @@ public class GameLogic {
     }
 
     public boolean applyGuess(char letter) {
-        if (hits.indexOf(letter) != -1 && misses.indexOf(letter) != -1) {
+        if (hits.indexOf(letter) != -1 || misses.indexOf(letter) != -1) {
             throw new IllegalArgumentException(letter + " has already been " +
                     "guessed");
         }
@@ -36,5 +37,10 @@ public class GameLogic {
         }
 
         return progress;
+    }
+
+    public int remainingTries (){
+        return MAX_TRIES-misses.length();
+
     }
 }
