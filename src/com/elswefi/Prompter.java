@@ -26,8 +26,11 @@ public class Prompter {
         }
 
     }
-    public void displayProgress(){
-        System.out.printf("\ntry to solve :%s\n",mGameLogic.currentProgress());
+
+    public void displayProgress() {
+        System.out.printf("\nyou have %d tries left to solve :%s\n"
+                , mGameLogic.remainingTries()
+                , mGameLogic.currentProgress());
     }
 
 }

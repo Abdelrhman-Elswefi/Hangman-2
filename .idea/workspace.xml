@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7c81b18-36ba-4916-b56d-3a576866fdea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/elswefi/GameLogic.java" afterPath="$PROJECT_DIR$/src/com/elswefi/GameLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/elswefi/Main.java" afterPath="$PROJECT_DIR$/src/com/elswefi/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/elswefi/Prompter.java" afterPath="$PROJECT_DIR$/src/com/elswefi/Prompter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="Prompter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/elswefi/Prompter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state relative-caret-position="33">
+              <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
               <folding>
                 <element signature="e#141#142#0" expanded="true" />
                 <element signature="e#179#180#0" expanded="true" />
@@ -232,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518884100803</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="editing#2 {stopped the guesser from making the same guess twice.}">
+      <created>1518884744137</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518884744137</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -276,7 +281,8 @@
     <MESSAGE value="Added a method to turn the answer into dashes and a method to display progress." />
     <MESSAGE value="stopped the guesser from making the same guess twice." />
     <MESSAGE value="editing {stopped the guesser from making the same guess twice.}" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing {stopped the guesser from making the same guess twice.}" />
+    <MESSAGE value="editing#2 {stopped the guesser from making the same guess twice.}" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing#2 {stopped the guesser from making the same guess twice.}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -306,8 +312,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/elswefi/Prompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state relative-caret-position="33">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding>
             <element signature="e#141#142#0" expanded="true" />
             <element signature="e#179#180#0" expanded="true" />
