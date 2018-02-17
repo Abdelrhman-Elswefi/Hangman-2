@@ -11,16 +11,11 @@ public class Prompter {
 
     public void promptForGuess() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("please enter a letter :\n");
+        System.out.print("please enter a letter :");
         String guessInput = scanner.nextLine();
         char guess = guessInput.charAt(0);
         try {
-            boolean isHit = mGameLogic.applyGuess(guess);
-            if (isHit) {
-                System.out.print("we got a hit !");
-            } else {
-                System.out.print("oops! you missed");
-            }
+            mGameLogic.applyGuess(guess);
         } catch (IllegalArgumentException iae) {
             System.out.print(iae.getMessage());
         }
@@ -31,6 +26,17 @@ public class Prompter {
         System.out.printf("\nyou have %d tries left to solve :%s\n"
                 , mGameLogic.remainingTries()
                 , mGameLogic.currentProgress());
+    }
+
+    public void displayResult() {
+        if (mGameLogic.isWon()) {
+            System.out.printf("congratulations, the answer is %s " +
+                    "and you did it with %d tries remaining !", mGameLogic
+                    .getAnswer(), mGameLogic.remainingTries());
+        } else {
+            System.out.printf("bummer , the answer was : %s", mGameLogic
+                    .getAnswer());
+        }
     }
 
 }

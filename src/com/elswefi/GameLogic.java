@@ -2,6 +2,11 @@ package com.elswefi;
 
 public class GameLogic {
     private String answer;
+
+    public String getAnswer() {
+        return answer;
+    }
+
     private final static int MAX_TRIES=7;
     private String hits = "";
     private String misses = "";
@@ -42,5 +47,8 @@ public class GameLogic {
     public int remainingTries (){
         return MAX_TRIES-misses.length();
 
+    }
+    public boolean isWon (){
+        return currentProgress().indexOf('-')==-1;
     }
 }
