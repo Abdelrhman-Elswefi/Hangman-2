@@ -3,6 +3,9 @@ package com.elswefi;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        GameLogic gameLogic = new GameLogic("java");
+        Prompter prompter = new Prompter(gameLogic);
+        prompter.promptForGuess();
+
     }
 }
