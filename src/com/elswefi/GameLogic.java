@@ -7,7 +7,7 @@ public class GameLogic {
         return answer;
     }
 
-    private final static int MAX_TRIES=7;
+    private final static int MAX_TRIES = 7;
     private String hits = "";
     private String misses = "";
 
@@ -15,11 +15,29 @@ public class GameLogic {
         this.answer = answer;
     }
 
-    public boolean applyGuess(char letter) {
+    private char normalizeInput(char letter) {
+        if (!Character.isLetter(letter)) {
+            throw new IllegalArgumentException("a letter is required !");
+        }
         if (hits.indexOf(letter) != -1 || misses.indexOf(letter) != -1) {
             throw new IllegalArgumentException(letter + " has already been " +
                     "guessed");
         }
+        Character.toLowerCase(letter);
+        return letter;
+    }
+
+    public boolean applyGuess(String letter) {
+        if (letter.length() == 0) {
+            throw new IllegalArgumentException("a letter is required");
+        }
+        char guess = letter.charAt(0);
+        return applyGuess(guess);
+    }
+
+    public boolean applyGuess(char letter) {
+        letter = normalizeInput(letter);
+
         boolean isHit = answer.indexOf(letter) != -1;
 
         if (isHit) {
@@ -44,11 +62,12 @@ public class GameLogic {
         return progress;
     }
 
-    public int remainingTries (){
-        return MAX_TRIES-misses.length();
+    public int remainingTries() {
+        return MAX_TRIES - misses.length();
 
     }
-    public boolean isWon (){
-        return currentProgress().indexOf('-')==-1;
+
+    public boolean isWon() {
+        return currentProgress().indexOf('-') == -1;
     }
 }

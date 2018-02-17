@@ -13,9 +13,8 @@ public class Prompter {
         Scanner scanner = new Scanner(System.in);
         System.out.print("please enter a letter :");
         String guessInput = scanner.nextLine();
-        char guess = guessInput.charAt(0);
         try {
-            mGameLogic.applyGuess(guess);
+            mGameLogic.applyGuess(guessInput);
         } catch (IllegalArgumentException iae) {
             System.out.print(iae.getMessage());
         }
