@@ -13,9 +13,22 @@ public class GameLogic {
         boolean isHit = answer.indexOf(letter) != -1;
         if (isHit) {
             hits += letter;
-        }else {
-            misses+=letter;
+        } else {
+            misses += letter;
         }
         return isHit;
+    }
+
+    public String currentProgress() {
+        String progress = "";
+        for (char letter : answer.toCharArray()) {
+            char display = '-';
+            if (hits.indexOf(letter) != -1) {
+                display = letter;
+            }
+            progress += display;
+        }
+
+        return progress;
     }
 }

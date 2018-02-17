@@ -11,7 +11,7 @@ public class Prompter {
 
     public void promptForGuess() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("please enter a letter :");
+        System.out.print("please enter a letter :\n");
         String guessInput = scanner.nextLine();
         char guess = guessInput.charAt(0);
         boolean isHit = mGameLogic.applyGuess(guess);
@@ -20,6 +20,9 @@ public class Prompter {
         } else {
             System.out.print("oops! you missed");
         }
+    }
+    public void displayProgress(){
+        System.out.printf("\ntry to solve :%s\n",mGameLogic.currentProgress());
     }
 
 }
