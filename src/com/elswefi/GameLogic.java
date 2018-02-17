@@ -10,14 +10,18 @@ public class GameLogic {
     }
 
     public boolean applyGuess(char letter) {
-        boolean isHit = answer.indexOf(letter) != -1;
         if (hits.indexOf(letter) != -1 && misses.indexOf(letter) != -1) {
-            if (isHit) {
-                hits += letter;
-            } else {
-                misses += letter;
-            }
-        }else {System.out.printf("%s has already been guessed",letter);}
+            throw new IllegalArgumentException(letter + " has already been " +
+                    "guessed");
+        }
+        boolean isHit = answer.indexOf(letter) != -1;
+
+        if (isHit) {
+            hits += letter;
+        } else {
+            misses += letter;
+        }
+
         return isHit;
     }
 
